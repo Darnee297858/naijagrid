@@ -5,6 +5,15 @@
 		},
 		{
 			"path": "../../../../aether-cloud"
+		},
+		{
+			"path": "../../../../nexus-luxe-store"
+		},
+		{
+			"path": "../../../../nexus-flow-kanban"
+		},
+		{
+			"path": "../../../../OLUSODO DANIEL"
 		}
 	],
 	"settings": {}

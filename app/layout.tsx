@@ -1,16 +1,27 @@
-import type { Metadata } from "next";
-import "./globals.css";
+type Metadata = {
+  title?: string;
+  description?: string;
+  [key: string]: unknown;
+};
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      [elemName: string]: any;
+    }
+  }
+}
+
+type LayoutProps = {
+  children: unknown;
+};
 
 export const metadata: Metadata = {
   title: "NaijaGrid - Know When Light Dey",
   description: "Crowd-sourced NEPA grid tracking and verified Nigerian artisan directory.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en">
       <body className="min-h-screen bg-gray-100 text-gray-900 flex flex-col">
